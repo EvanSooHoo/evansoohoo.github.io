@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <title>Ay Nako!</title>
+
+  <style type = "text/css">
+  p {text-indent: 25px;}
+  p {font-size: 20px;}
+
+  .button 
+  {
+    position: absolute;
+    top: 91.5%;
+    left:451px;
+    } /* .button */
+    body 
+    {
+      background-color: rgb(245,245,220); 
+    }
+    </style>
+    <head>
+      <script>
+                function main() 
+                {
+                  sessionStorage.clickcount = 0;
+                  var x = document.getElementById("frm1");
+                  document.getElementById("demo").innerHTML = x;
+                  var text = "";
+                  var i;
+                  for (i = 0; i < x.length ;i++) 
+                  {
+                    text += x.elements[i].value + "<br>";
+                    console.log("We are appending " + x.elements[i].value + "to text");
+                  }
+                  startGame(text);
+                 }
+  function startGame(inputString)
+  {
+    var textInput;
+    var personName = textInput;
+    if (sessionStorage.clickcount) 
+    {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+    } 
+    else 
+    {
+      sessionStorage.clickcount = 1;
+    }
+    console.log("The value of clickcount is " + sessionStorage.clickcount);
+    if(sessionStorage.clickcount == 1)
+    {
+      
+         var temp = inputString.toLowerCase();
+         personName = temp;
+         console.log("FIRST CLICK Test: The value of temp is " + temp);
+         console.log("The search value is " + temp.indexOf("evan"));
+         if(temp.indexOf("kai") != -1)
+         
+         {
+             document.getElementById("demo").innerHTML = "KAI?! GET OUT OF MY CLASS. Just kidding. You're a very good student";
+         }
+         else if(temp.indexOf("zaid") != -1)
+         {
+             document.getElementById("demo").innerHTML = "Zaid? Rock on";
+         }
+         else if(temp.indexOf("15/25") != -1)
+         {
+            document.getElementById("demo").innerHTML = "Bonus Activated";
+         }
+         personName = personName.toUpperCase();
+         var temp = "";
+            temp += personName + "COME TO THE BOARD";
+            temp += " AND PROVE THAT YOU DESERVE YOUR B+";
+             //document.write("\n\n");
+             temp += "<br>Fe + Cl2 --> FeCl3";
+             temp += "<br>Balance this chemical equation";
+            document.getElementById("demo").innerHTML = temp;
+           
+
+
+
+    }//name loop ends
+    
+    if(sessionStorage.clickcount == 2)
+    {
+            console.log("CLICK 2 LOOP");
+            
+    }
+  }
+  </script>
+</head>
+      <body>
+        <div id="wrapper">
+          <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <a class="navbar-brand" href="about.html">Evan's Website</a>
+            </div>      
+
+            <div class="collapse navbar-collapse" id="mainNavBar">
+
+              <div>
+                <ul class="nav navbar-nav">
+                  <li> <a href="index.html">Home</a></li>
+
+                  <li class="dropdown">
+
+                    <a class="dropdown-toggle" data-toggle="dropdown">Blog
+                      <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="silverbullet.html">"The Silver Bullet"</a></li>
+                        <li><a href="alonetogether.html">Thoughts on <u>Alone Together</u></a></li>
+                        <li><a href="humanities.html">The Importance of Humanities Classes</a></li> 
+                        <li><a href="replaceability.html">Replaceability</a></li>
+                        <li><a href="blogfinals.html">Thoughts on Finals</a></li>
+                        <li><a href="bloglinear.html">Linear Learning</a></li>
+                        <li><a href="blogcontrol.html">Control</a></li>
+                        <li><a href="blograndom.html">Random Thoughts</a></li>
+                        <li><a href="blogmemory.html">New Memories</a></li>
+                        <li><a href="blogpnp.html">P and NP</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown">
+
+                      <a class="dropdown-toggle" data-toggle="dropdown">My Poems
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="dayandnight.html">Day and Night</a></li>
+                          <li><a href="youruinedthissong.html">You Ruined this Song</a></li>
+                          <li><a href="gone.html">Gone</a></li> 
+                          <li><a href="poemcs.html">Don't Give Up (on Computer Science)</a></li> 
+                          <li><a href="poemdc.html">Ode to DC Swipes (verse)</a></li> 
+                          <li><a href="poembike.html">Biking</a></li> 
+                        </ul>
+                      </li>
+
+
+                      <li> <a href="shortstories.html">My Short Stories</a></li>
+
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+
+                        <a class="dropdown-toggle" data-toggle="dropdown">Facebook Statuses
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="thisquarter.html">Things I Learned (this Quarter)</a></li>
+                            <li><a href="do.html">College, DO's and DON'Ts</a></li>
+                            <li> <a href="http://thoughtcatalog.com/evan-soohoo/2014/04/college-first-semester-vs-second-semester/">College, First Semester vs. Second Semester (link)</a></li>
+                            <li><a href="metaphoruniversity.html">Metaphors for College - Choosing a University</a></li>
+                            <li><a href="metaphormidterm.html">Metaphors for College - Midterms</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+
+                          <a class="dropdown-toggle" data-toggle="dropdown">About CSIF
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="whykemper.html">Why Kemper?</a></li>
+                              <li> <a href="http://csifdocs.cs.ucdavis.edu/about-us">About CSIF</a></li>
+                            </ul>
+                          </li>
+                          <li> <a href="mailto: evan.soohoo@gmail.com">Contact Me</a></li>
+                          <li class="active"> <a href="random.html">Random!</a></li>
+
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+
+                <h1>
+                  <center>Ay Nako!</center>
+                </h1>
+                <div style="text-align:center"><p id="demo"></p></div>
+                <form id="frm1" action="form_action.asp" align="center">
+
+                  <textarea rows="4" cols="50" name="frm1">Enter name to begin...</textarea>
+
+                </form>
+
+                <div style="text-align:center" ><button onclick="main()" align="center">Enter</button></div>
+
+</body>
+</html>
+</html>
